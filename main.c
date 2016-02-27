@@ -6,18 +6,28 @@
 /*   By: telain <telain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 20:21:52 by telain            #+#    #+#             */
-/*   Updated: 2016/02/27 16:17:28 by telain           ###   ########.fr       */
+/*   Updated: 2016/02/27 17:06:49 by telain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "puissance4.h"
 
+int		find_height(t_value *value, int col)
+{
+	int		i;
+
+	i = 0;
+	while (value->grid[col][i] != ' ')
+		i++;
+	return (i);
+}
+
 t_value	*play(int col, int player, t_value *value)
 {
 	if (player == 1)
-		value->grid[col][0] = 'x';
+		value->grid[col][find_height(value, col)] = 'x';
 	else
-		;//faire jouer le bot
+		value->grid[col][find_height(value, col)] = 'o';
 	return (value);
 }
 
@@ -35,9 +45,11 @@ int		main(int ac, char **av)
 	ft_putstr("\ntaille en y : ");
 	ft_putnendl(value->size_y);
 	display_grid(value);
-	while (i++ < 4)
+	while (i++ < 10)
 	{
 		value = play(ft_atoi(read_input(value)), 1, value);
+		display_grid(value);
+		value = play(ft_atoi(read_input(value)), 2, value);
 		display_grid(value);
 	}
 	return (0);	
