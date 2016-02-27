@@ -6,7 +6,7 @@
 /*   By: telain <telain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 21:16:53 by telain            #+#    #+#             */
-/*   Updated: 2016/02/26 23:25:05 by telain           ###   ########.fr       */
+/*   Updated: 2016/02/27 16:20:43 by telain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	display_grid(t_value *value)
 	y = value->size_y - 1;
 	while (y >= 0)
 	{
+			ft_putchar('|');
 		while (x < value->size_x)
 		{
 			write_case(value, x, y);

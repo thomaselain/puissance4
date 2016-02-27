@@ -6,7 +6,7 @@
 /*   By: telain <telain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 20:21:52 by telain            #+#    #+#             */
-/*   Updated: 2016/02/26 23:45:43 by telain           ###   ########.fr       */
+/*   Updated: 2016/02/27 16:17:28 by telain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ int		main(int ac, char **av)
 	display_grid(value);
 	while (i++ < 4)
 	{
-		value = play(ft_atoi(read_input()), 1, value);
-	display_grid(value);
+		value = play(ft_atoi(read_input(value)), 1, value);
+		display_grid(value);
 	}
 	return (0);	
 }

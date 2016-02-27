@@ -6,7 +6,7 @@
 /*   By: telain <telain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 20:22:14 by telain            #+#    #+#             */
-/*   Updated: 2016/02/26 23:41:51 by telain           ###   ########.fr       */
+/*   Updated: 2016/02/27 16:17:08 by telain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ t_value		*play(int col, int player, t_value *value);
 t_value		*create_grid(t_value *value);
 t_value		*create_value(int size_x, int size_y);
 void		display_grid(t_value *value);
-char		*read_input(void);
+char		*read_input(t_value *value);
 
 #endif
